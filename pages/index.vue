@@ -2,12 +2,12 @@
   <!-- three columns -->
   <div class="flex">
     <!-- left side bar -->
-    <div class="w-left h-full border-r-2 border-gray-400 min-h-screen">
+    <div class="w-left h-full border-r border-gray-400 min-h-screen">
       <SideBar :links="links">
         <template #default="{ link }">
           <li class="group flex items-center py-2 pl-4 my-1 cursor-pointer text-gray-600"
-            :class="`${setLink === link.title ? 'bg-white border-l-4 border-blue-resolute' : 'border-l-4 border-transparent'}`"
-            @click="setLink = link.title">
+              :class="`${setLink === link.title ? 'bg-white border-l-4 border-blue-resolute' : 'border-l-4 border-transparent'}`"
+              @click="setLink = link.title">
             <span v-html="link.icon" :class="setLink === link.title ? 'text-blue-resolute group-hover:text-blue-resolute' : 'group-hover:text-gray-700'"></span>
             <span class="pl-3 text-sm group-hover:text-gray-700">{{ link.title }}</span>
           </li>
@@ -16,7 +16,7 @@
     </div>
     <!-- middle content -->
     <div class="flex-1">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium totam esse corporis minus ipsa? Ratione, distinctio vel? Quasi harum error blanditiis laborum id maiores repellat eum consequuntur facilis atque.
+     
     </div>
     <!-- right side bar -->
     <div class="w-right border-l border-gray-400 min-h-screen bg-white"></div>
