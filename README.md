@@ -1,2 +1,3 @@
 # Resolute
+
 Rebuilding resolution UI
