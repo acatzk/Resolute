@@ -7,14 +7,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        
+        'blue-resolute': '#149ED4',
+        'blue-resolute-dark': '#0B799E',
+        'blue-resolute-icon': '#A7B7C7'
       },
       spacing: {
         '72': '18rem'
       },
       width: {
-        '7/10': '70%',
-        '3/10': '30%'
+        'left': '228px'
       },
       fontSize: {
         xxs: '0.7rem'
