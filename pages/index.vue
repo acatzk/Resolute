@@ -2,7 +2,7 @@
   <!-- three columns -->
   <div class="flex">
     <!-- left side bar -->
-    <div class="w-left h-full border-r border-gray-400 min-h-screen">
+    <div class="w-left h-full border-r border-gray-400 min-h-screen flex-shrink-0">
       <SideBar :links="links">
         <template #default="{ link }">
           <li class="group flex items-center py-2 pl-4 my-1 cursor-pointer text-gray-600"
@@ -16,7 +16,67 @@
     </div>
     <!-- middle content -->
     <div class="flex-1">
-     
+      <div class="text-sm px-2 py-2 border-b border-gray-400 mb-4 flex items-center">
+        <span class="px-2 rounded hover:bg-gray-100">
+          <a class="text-blue-resolute" href="#">Contacts</a>
+        </span>
+        <span>
+          <svg class="w-5 h-5 text-gray-600" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        </span>
+        <span class="px-2 rounded hover:bg-gray-100">
+          <a class="text-blue-resolute" href="#">Joshua Galit</a>
+        </span>
+        <span>
+          <svg class="w-5 h-5 text-gray-600" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        </span>
+        <span class="px-2">
+          <a class="text-gray-600" href="#">Properties</a>
+        </span>
+      </div>
+
+      <div class="container mx-auto max-w-5xl py-6 px-8">
+        
+        <div class="flex items-center space-x-3">
+          <span>
+            <svg class="w-6 h-6 text-blue-resolute" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+          </span>
+          <span class="uppercase text-3xl text-gray-700 tracking-wide">
+            GALDZO2R415ZK
+          </span>
+          <span class="uppercase font-bold text-xs rounded-full px-2 bg-blue-resolute-dark text-white tracking-wide">
+            Active
+          </span>
+        </div>
+        <span class="text-sm text-gray-700">123 Main St., Galveston, TX 77555</span>
+
+        <div class="mt-5 border border-gray-400 rounded w-full bg-white overflow-hidden">
+          <div class="border-t-4 border-blue-resolute-dark px-4 py-5">
+            <div class="flex space-x-3">
+              <div class="w-1/3">
+                <h2 class="text-lg font-semibold">Details</h2>
+                <p class="mt-3 text-gray-700 text-sm leading-normal">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, error.
+                </p>
+                <p class="mt-3 text-gray-700 text-sm leading-normal">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p class="mt-3 text-gray-700 text-sm leading-normal">
+                  Lorem, ipsum dolor sit amet <a class="text-blue-resolute" href="#">consectetur avante</a>
+                </p>
+              </div>
+              <div class="w-2/3">
+                <div class="flex flex-wrap">
+                  <div class="w-1/2">
+                    <label class="block text-gray-800 text-base">PID</label>
+                    <input class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3" type="text" value="GALDZO2R415ZK">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
     <!-- right side bar -->
     <div class="w-right border-l border-gray-400 min-h-screen bg-white"></div>
