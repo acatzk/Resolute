@@ -49,31 +49,196 @@
         </div>
         <span class="text-sm text-gray-700">123 Main St., Galveston, TX 77555</span>
 
-        <div class="mt-5 border border-gray-400 rounded w-full bg-white overflow-hidden">
-          <div class="border-t-4 border-blue-resolute-dark px-4 py-5">
-            <div class="flex space-x-3">
-              <div class="w-1/3">
-                <h2 class="text-lg font-semibold">Details</h2>
-                <p class="mt-3 text-gray-700 text-sm leading-normal">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, error.
-                </p>
-                <p class="mt-3 text-gray-700 text-sm leading-normal">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <p class="mt-3 text-gray-700 text-sm leading-normal">
-                  Lorem, ipsum dolor sit amet <a class="text-blue-resolute" href="#">consectetur avante</a>
-                </p>
-              </div>
-              <div class="w-2/3">
-                <div class="flex flex-wrap">
-                  <div class="w-1/2">
-                    <label class="block text-gray-800 text-base">PID</label>
-                    <input class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3" type="text" value="GALDZO2R415ZK">
-                  </div>
+
+        <div class="mt-5 space-y-5">
+          <CardDetails :borderColor="`border-t-4 border-blue-resolute`">
+            <template #card-header>
+              <h2 class="text-lg font-semibold">Details</h2>
+              <p class="mt-3 text-gray-700 text-sm leading-normal">
+                Information about this property only. Owner Name, Protest Address and CAD Mailing address must math the country's records
+              </p>
+              <p class="mt-3 text-gray-700 text-sm leading-normal">
+                If you need to update contact, you may do so in the contact page for <a href="#" class="text-blue-resolute hover:underline">Bart Simpson</a>
+              </p>
+            </template>
+            <template #card-content>
+              <div class="flex flex-wrap">
+                <div class="w-1/2">
+                  <label class="block text-gray-800 text-base">PID</label>
+                  <input class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3" type="text" value="GALDZO2R415ZK">
+                </div>
+                <div class="w-1/2 pl-4">
+                  <label class="block text-gray-800 text-base">CAD Owner Name</label>
+                  <input class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3" type="text" value="Bart Simpson">
+                </div>
+                <div class="w-full mt-4">
+                  <label class="block text-gray-800 text-base">Post Address</label>
+                  <input class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3" type="text" value="123 Main St., Galveston, TX 77555">
+                </div>
+                <div class="w-full mt-4">
+                  <label class="block text-gray-800 text-base">CAD Mailing Address</label>
+                  <input class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3" type="text" value="123 Fake St., Galveston, TX 77555">
+                </div>
+                <div class="w-1/3 mt-4">
+                  <label class="block text-gray-800 text-base">Fee Rate</label>
+                  <input class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3" type="text" value="40">
+                </div>
+                <div class="w-1/3 pl-4 mt-4">
+                  <label class="block text-gray-800 text-base">Start Year</label>
+                  <input class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3" type="text" value="2021">
+                </div>
+                <div class="w-1/3 pl-4 mt-4">
+                  <label class="block text-gray-800 text-base">Agency End Date</label>
+                  <input class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3" type="text" value="">
                 </div>
               </div>
-            </div>
-          </div>
+            </template>
+          </CardDetails>
+
+          <CardDetails :borderColor="`border-t-4 border-blue-resolute`">
+            <template #card-header>
+              <h2 class="text-lg font-semibold">Flags</h2>
+              <p class="mt-3 text-gray-700 text-sm leading-normal">
+                Flags are just like tags. We have "flags" for many common situations where a property might require extra attention.
+              </p>
+            </template>
+            <template #card-content>
+              <table class="table-auto w-full">
+                <thead class="border-b">
+                  <tr class="text-left">
+                    <th class="px-4 py-2"></th>
+                    <th class="px-4 py-2">Year</th>
+                    <th class="px-4 py-2">Flag</th>
+                    <th class="px-4 py-2">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b">
+                    <td class="px-4 py-2">
+                      <input type="checkbox">
+                    </td>
+                    <td class="px-4 py-2">Ongoing</td>
+                    <td class="px-4 py-2">
+                      <div class="flex items-center font-medium text-red-600">
+                        <span class="text-xl">&bull;</span>
+                        <span class="ml-2">Harvey</span>
+                      </div>
+                    </td>
+                    <td class="px-4 py-2">
+                      <div class="text-sm">Fence fell over in Hurricane Harvey</div>
+                      <div class="text-sm text-gray-600">Applied by Aaron on April 15, 2018 10:37 AM</div>
+                    </td>
+                  </tr>
+                  <tr class="mt-2">
+                    <td class="px-4 py-2">
+                      <input type="checkbox">
+                    </td>
+                    <td class="px-4 py-2">2017</td>
+                    <td class="px-4 py-2">
+                      <div class="flex items-center font-medium text-red-600">
+                        <span class="text-xl">&bull;</span>
+                        <span class="ml-2">Litigation</span>
+                      </div>
+                    </td>
+                    <td class="px-4 py-2">
+                      <div class="text-sm">N/A</div>
+                      <div class="text-sm text-gray-600">Applied by System on April 4, 2018 8:13 AM</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="text-xs bg-gray-200 text-gray-600 font-semibold py-1 px-3">
+                Show 2 older flags
+              </div>
+              <a href="#" class="flex items-center mt-4">
+                <span>
+                  <svg class="w-5 h-5 text-gray-800" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                </span>
+                <span class="uppercase text-sm font-semibold tracking-wide text-gray-800">Apply new flag</span>
+              </a>
+            </template>
+          </CardDetails>
+
+          <CardDetails :borderColor="`border-t-4 border-blue-resolute`">
+            <template #card-header>
+              <h2 class="text-lg font-semibold">AOAs</h2>
+              <p class="mt-3 text-gray-700 text-sm leading-normal">
+                Here you'll see all the AOAs we've ever had for this property. The active one is at the top, the rest are just there for auditing purposes.
+              </p>
+            </template>
+            <template #card-content>
+              <table class="table-auto w-full">
+                <thead class="border-b">
+                  <tr class="text-left">
+                    <th class="px-4 py-2">Name</th>
+                    <th class="px-4 py-2">Status</th>
+                    <th class="px-4 py-2">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b">
+                    <td class="px-4 py-2 mt-2 flex flex-col">
+                      <span class="text-sm text-blue-resolute leading-tight">AOA 22228</span>
+                      <span class="text-xxs text-gray-500 font-medium">Signed</span>
+                    </td>
+                    <td class="px-4 py-2">
+                      <div class="flex items-center font-medium text-green-600">
+                        <span class="text-xl">&bull;</span>
+                        <span class="ml-2">No Issues</span>
+                      </div>
+                    </td>
+                    <td class="px-4 py-2">
+                      <div class="text-xs">If there's a problem with this AOA, you can <span class="text-blue-resolute">make an AOA issue.</span></div>
+                      <div class="text-xs text-gray-600">Applied by Aaron on April 15, 2018 10:37 AM</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#" class="flex items-center mt-4">
+                <span>
+                  <svg class="w-5 h-5 text-gray-800" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                </span>
+                <span class="uppercase text-sm font-semibold tracking-wide text-gray-800">Create new AoA</span>
+              </a>
+            </template>
+          </CardDetails>
+
+          <CardDetails :borderColor="`border-t-4 border-red-700`">
+            <template #card-header>
+              <h2 class="text-lg font-semibold">Cancel</h2>
+            </template>
+            <template #card-content>
+              <div class="border border-yellow-400 border-t-4 px-4 py-4 mt-1 rounded w-full bg-yellow-50 text-sm text-yellow-900 flex">
+                <span>
+                  <svg class="w-6 h-6" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                </span>
+                <span class="ml-2 leading-normal">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eveniet odit totam vero molestiae dicta ab voluptatibus, id numquam ducimus aliquid tempore et eius soluta architecto vel? Tempora, molestias inventore?
+                </span>
+              </div>
+              
+              <div class="w-full mt-3">
+                <label class="block text-gray-800 text-base">Reason</label>
+                <input class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3" type="text">
+              </div>
+              <div class="w-full mt-4">
+                <label class="block text-gray-800 text-base">Note</label>
+                <textarea class="w-full text-base bg-gray-100 border border-gray-300 outline-none rounded py-3 px-3">
+                </textarea>
+              </div>
+              <div class="mt-2 flex items-center text-gray-700">
+                <input type="checkbox">
+                <span class="ml-2 text-sm">I want to cancel this property, which has a situs of 123 Main St, Galveston, TX 77555</span>
+              </div>
+              <div class="my-3 flex items-center text-gray-700 pb-5 border-b border-gray-400">
+                <input type="checkbox">
+                <span class="ml-2 text-sm truncate">Mark this client as "Do Not Contact". If we are still on good terms with this person, don't check this box.</span>
+              </div>
+              <div class="my-3 text-right">
+                <button class="text-sm font-semibold bg-red-600 rounded py-3 px-4 text-white">Cancel This Property</button>
+              </div>
+            </template>
+          </CardDetails>
         </div>
 
       </div>
@@ -91,7 +256,8 @@
       }
     },
     components: {
-      SideBar: () => import('@/components/SideBar')
+      SideBar: () => import('@/components/SideBar'),
+      CardDetails: () => import('@/components/CardDetails')
     },
     data () {
       return {
