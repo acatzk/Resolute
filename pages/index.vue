@@ -49,7 +49,6 @@
         </div>
         <span class="text-sm text-gray-700">123 Main St., Galveston, TX 77555</span>
 
-
         <div class="mt-5 space-y-5">
           <CardDetails :borderColor="`border-t-4 border-blue-resolute`">
             <template #card-header>
@@ -244,7 +243,52 @@
       </div>
     </div>
     <!-- right side bar -->
-    <div class="w-right border-l border-gray-400 min-h-screen bg-white"></div>
+    <div class="w-right border-l border-gray-400 min-h-screen bg-white">
+      <div class="flex items-center justify-between text-gray-800 px-4 py-2">
+        <a href="#" class="font-medium">Notes</a>
+        <button class="flex items-center rounded-lg px-2 py-1 border text-xs">
+          <span>
+            <svg class="w-5 h-5" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+          </span>
+          <span class="ml-1 uppercase font-medium">New note</span>
+        </button>
+      </div>
+      <div class="mt-3 text-sm font-medium border-b border-gray-400">
+        <div class="flex items-center justify-between px-4">
+          <a  v-for="(link, i) in sideLink" :key="i"
+              href="#" 
+              class="text-gray-700 pb-3 block w-full text-center"
+              :class="`${ link === setSideLink  ? 'border-b-2 border-blue-resolute' : 'border-b-2 border-transparent'}`"
+              @click="setSideLink = link">
+              {{ link }}
+          </a>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <div class="mt-3 flex px-4 py-2 text-gray-800 cursor-pointer group group-hover:bg-blue-500">
+          <div class="text-blue-resolute-icon">
+            <svg class="w-6 h-6 group:hover:text-white" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+          </div>
+          <div class="ml-2">
+            <div class="text-sm leading-normal font-medium">
+              The client called and said their fence fell over.
+            </div>
+            <div class="mt-2 text-xs text-gray-600">Aaron &middot; April 15, 2021 9:36am</div>
+          </div>
+        </div>
+        <div class="mt-3 flex px-4 text-gray-800 cursor-pointer">
+          <div class="text-blue-resolute-icon">
+            <svg class="w-6 h-6" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+          </div>
+          <div class="ml-2">
+            <div class="text-sm leading-normal font-medium">
+              AOA 22228 was made the current AOA for PID GALDZO2R415ZK
+            </div>
+            <div class="mt-2 text-xs text-gray-600">Aaron &middot; April 7, 2021 11:42am</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -332,7 +376,9 @@
             icon: '<svg class="w-5 h-5" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>',
           }
         ],
-        setLink: 'Properties'
+        setLink: 'Properties',
+        sideLink: ['Notes Only', 'Audits', 'Everything'],
+        setSideLink: 'Notes Only'
       }
     }
   }
